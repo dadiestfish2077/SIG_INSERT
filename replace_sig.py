@@ -31,7 +31,7 @@ def replace_empty_space(binary_file, signature_file):
         f.seek(empty_space_offset)
         f.write(signature)
 
-    print("Signature successfully replaced in the binary file.")
+    print("Signature of size {} successfully placed in the binary file at offset {}.".format(signature_size , empty_space_offset))
 
 def main():
     parser = argparse.ArgumentParser(description='Replace empty space in a binary file with a signature.')
